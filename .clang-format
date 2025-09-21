@@ -1,0 +1,12 @@
+# This is a .clang-format file
+# Use 'Cpp' for both C and C++ code.
+Language: Cpp
+BasedOnStyle: LLVM
+
+# Customizations for our project
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 100
+AllowShortFunctionsOnASingleLine: None
+PointerAlignment: Right

@@ -1,0 +1,18 @@
+# Build output directory
+build/
+
+# Documentation output directory
+docs/
+
+# Compiled files
+*.o
+*.a
+*.so
+*.exe
+
+# Editor-specific files (e.g., VS Code)
+.vscode/
+
+# Other common files to ignore
+*.swp
+*~
