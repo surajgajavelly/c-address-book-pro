@@ -2,7 +2,7 @@
  * @file contact_helper.c
  * @author Gajavelly Sai Suraj
  * @brief Implementation of helper, validation, and user-interaction functions for the Address Book application.
- * 
+ * @copyright Copyright (c) 2025 All rights Reserved
  */
 
 #include <stdio.h>
@@ -22,27 +22,6 @@ void remove_newline(char *str)
 {
     str[strcspn(str, "\n")] = '\0';
 }
-
-/**
- * @brief Generates a new unique contact ID.
- * @param book A pointer to the AddressBook struct.
- * @return A new integer ID that is not currently in use.
- */
-// int generate_new_id(const AddressBook* book) {
-//     if (book->head == NULL) {
-//         return 1; // The first ID is 1
-//     }
-
-//     int max_id = 0;
-//     Contact* current = book->head;
-//     while (current != NULL) {
-//         if (current->id > max_id) {
-//             max_id = current->id;
-//         }
-//         current = current->next;
-//     }
-//     return max_id + 1;
-// }
 
 /**
  * @brief Generates and returns the next available unique ID.
@@ -230,7 +209,6 @@ int get_int_input(const char* prompt) {
  */
 Choice handle_attempt(int *attempts) {
     (*attempts)++;
-    //printf("(%d/%d attempts used)\n", *attempts, MAX_ATTEMPTS);
 
     printf("\n[ ATTEMPT %d of %d ]\n", *attempts, MAX_ATTEMPTS);
     printf("-----------------------------------------\n");

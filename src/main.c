@@ -4,7 +4,7 @@
  * @brief  Entry point for the Address Book application.
  * Handles the main menu loop and delegates actions to feature functions.
  * @bug  None known
- * @copyright Copyright (c) 2025
+ * @copyright Copyright (c) 2025 All rights Reserved
  */
  
 #include <stdio.h> 

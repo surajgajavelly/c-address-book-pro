@@ -1,9 +1,8 @@
 /**
  * @file address_book.h
- * @author Gajavelly Sai Suraj
- * @brief Header for managing contacts in an address book.
- * @todo Add MAX_CONTACTS definition when feature is implemented.
- * @copyright Copyright (c) 2025
+ * @author Gajavelly Sai Suraj 
+ * @brief Header defining the core data structures and function prototypes for the Address Book.
+ * @copyright Copyright (c) 2025 All Rights Reserved.
  */
 
 #ifndef ADDRESS_BOOK_H
@@ -17,12 +16,12 @@
 #define MAX_EMAIL_LENGTH 50
 
 /**
- * @brief Search options for finding a contact.
+ * @brief Options for searching for a contact.
  */
 typedef enum { SEARCH_BY_NAME = 1, SEARCH_BY_PHONE, SEARCH_BY_EMAIL, SEARCH_CANCEL } SearchOption;
 
 /**
- * @brief Edit options for modifying a contact.
+ * @brief Options for modifying a contact.
  */
 typedef enum { EDIT_NAME = 1, EDIT_PHONE, EDIT_EMAIL, EDIT_SAVE, EDIT_CANCEL } EditOption;
 
@@ -38,7 +37,7 @@ typedef struct ContactNode {
 } Contact;
 
 /**
- * @brief Represents an address book.
+ * @brief Represents the entire address book.
  */
 typedef struct {
     Contact *head;     /**< Pointer to the first node in the linked list. */
@@ -58,7 +57,7 @@ void create_contact(AddressBook *book);
  * @brief Searches for a contact.
  *
  * @param book A pointer to the AddressBook.
- * @return Contact*
+ * @return Pointer to the found contact, or NULL.
  */
 Contact *search_contact(AddressBook *book);
 
