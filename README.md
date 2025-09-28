@@ -66,23 +66,24 @@ This project is cross-platform. Please follow the instructions for your environm
 
 ## On Linux or WSL (Recommended)
 ### 1. Install Prerequisites:
-```
+```bash
+
 sudo apt update && sudo apt install build-essential cmake
 ```
 ### 2. Clone the Repository:
-```
+```bash
 git clone [https://github.com/surajgajavelly/c-address-book-pro.git](https://github.com/surajgajavelly/c-address-book-pro.git)
 cd c-address-book-pro
 ```
 ### 3. Build the Project:
-```
+```bash
 rm -rf build && mkdir build && cd build
 cmake ..
 make
 ```
 ### 4. Run the Application:
 The executable is in the build directory. Run it from the project's root:
-```
+```bash
 ./build/addressbook
 ```
 ## On Windows (with MinGW Toolchain)
@@ -90,13 +91,13 @@ The executable is in the build directory. Run it from the project's root:
 Ensure you have GCC, CMake, and MinGW-make installed and available in your terminal's PATH.
 
 ### 2. Build the Project: From the project root, run:
-```
+```powershell
 rm -rf build; mkdir build; cd build
 cmake -G "MinGW Makefiles" ..
 mingw32-make
 ```
 ### 3. Run the Application: From the project root, run:
-```
+```powershell
 .\build\addressbook.exe
 ```
 ## Contributing
@@ -115,4 +116,5 @@ Contributions are what make the open-source community such an amazing place to l
 ## License
 
 Distributed under the MIT License. See LICENSE for more information.
+
 
