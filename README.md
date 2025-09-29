@@ -1,8 +1,5 @@
 # C Address Book — Professional Edition
 
-<img src="./assets/demo_test.gif" alt="Project Demo" style="width:500%; max-width:2000px;"/>
-
-
 <table>
   <tr>
     <td><img src="./assets/open.png" alt="Open Screenshot" width="400"/></td>
@@ -113,11 +110,11 @@ Contributions are what make the open-source community such an amazing place to l
 
 1. Fork the Project
 
-2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
+2. Create your Feature Branch (```git checkout -b feature/AmazingFeature```)
 
-3. Commit your Changes (git commit -m 'feat: Add some AmazingFeature')
+3. Commit your Changes (```git commit -m 'feat: Add some AmazingFeature'```)
 
-4. Push to the Branch (git push origin feature/AmazingFeature)
+4. Push to the Branch (```git push origin feature/AmazingFeature```)
 
 5. Open a Pull Request
 
