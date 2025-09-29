@@ -1,9 +1,10 @@
 # C Address Book — Professional Edition
-![Project Demo](./assets/demo_test.gif)
+<div style="display: flex; gap: 10px;">
+  <img src="./assets/demo_test.gif" alt="Project Demo" width="300"/>
+  <img src="./assets/open.png" alt="Open Screenshot" width="300"/>
+  <img src="./assets/list.png" alt="List Screenshot" width="300"/>
+</div>
 
-![Open](./assets/open.png)
-
-![List](./assets/list.png)
 
 A simple, robust, and professional command-line address book application written in C. This project demonstrates core C programming concepts, including linked lists, dynamic memory management, file I/O, and a modular, professional architecture.
 
