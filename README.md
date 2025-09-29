@@ -1,6 +1,5 @@
 # C Address Book — Professional Edition
 <div style="display: flex; gap: 10px;">
-  <img src="./assets/demo_test.gif" alt="Project Demo" width="300"/>
   <img src="./assets/open.png" alt="Open Screenshot" width="300"/>
   <img src="./assets/list.png" alt="List Screenshot" width="300"/>
 </div>
