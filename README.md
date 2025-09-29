@@ -1,8 +1,8 @@
 # C Address Book — Professional Edition
 <table>
   <tr>
-    <td><img src="./assets/open.png" alt="Open Screenshot" width="300"/></td>
-    <td><img src="./assets/list.png" alt="List Screenshot" width="300"/></td>
+    <td><img src="./assets/open.png" alt="Open Screenshot" width="400"/></td>
+    <td><img src="./assets/list.png" alt="List Screenshot" width="400"/></td>
   </tr>
 </table>
 
