@@ -3,6 +3,10 @@
 <img src="./assets/demo_test.gif" alt="Project Demo"/>
 </p>
 
+![Opening](assets/open.png)
+
+![List](assets/list.png)
+
 A simple, robust, and professional command-line address book application written in C. This project demonstrates core C programming concepts, including linked lists, dynamic memory management, file I/O, and a modular, professional architecture.
 
 This project was built from the ground up in a WSL/Linux environment and utilizes a full suite of professional development tools, including CMake, clang-format, static analysis, and a Doxygen-ready documentation standard. It is fully cross-platform and can also be compiled on Windows using the MinGW toolchain.
