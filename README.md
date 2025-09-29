@@ -1,6 +1,6 @@
 # C Address Book — Professional Edition
 
-<img src="./assets/demo_test.gif" alt="Project Demo" style="width:100%; max-width:1000px;"/>
+<img src="./assets/demo_test.gif" alt="Project Demo" style="width:500%; max-width:2000px;"/>
 
 
 <table>
