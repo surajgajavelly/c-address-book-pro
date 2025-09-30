@@ -2,13 +2,6 @@
 
 ![Demo Test](assets/test.gif)
 
-<table>
-  <tr>
-    <td><img src="./assets/open.png" alt="Open Screenshot" width="400"/></td>
-    <td><img src="./assets/list.png" alt="List Screenshot" width="400"/></td>
-  </tr>
-</table>
-
 
 A simple, robust, and professional command-line address book application written in C. This project demonstrates core C programming concepts, including linked lists, dynamic memory management, file I/O, and a modular, professional architecture.
 
