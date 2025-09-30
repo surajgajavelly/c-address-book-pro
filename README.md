@@ -1,5 +1,7 @@
 # C Address Book — Professional Edition
 
+![Demo Test](assets/test.gif)
+
 <table>
   <tr>
     <td><img src="./assets/open.png" alt="Open Screenshot" width="400"/></td>
