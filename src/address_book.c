@@ -209,7 +209,7 @@ void create_contact(AddressBook* book) {
  * @param book A pointer to the AddressBook struct.
  * @return A pointer to the selected Contact node, or NULL if not found or cancelled.
  */
-Contact* search_contact(AddressBook *book) {
+Contact* search_contact(const AddressBook *book) {
     
     printf("\n<===============================| SEARCH CONTACT |===============================>\n");
     printf("Ein: Time to put my nose to work! Let's see who we can find.\n");
@@ -229,9 +229,10 @@ Contact* search_contact(AddressBook *book) {
     
     int attempts = 0;
     char search_query[MAX_NAME_LENGTH];
-    int search_choice;
+    
 
     do {
+        int search_choice;
         printf("\n-------------------- SEARCH OPTIONS --------------------\n");
         printf("  %d) Search by Name\n",  SEARCH_BY_NAME);
         printf("  %d) Search by Phone\n", SEARCH_BY_PHONE);
@@ -360,6 +361,7 @@ Contact* search_contact(AddressBook *book) {
     return NULL;
     
 }
+
 
 /**
  * @brief Allows the user to edit the details of a specific contact.

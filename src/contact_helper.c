@@ -83,7 +83,7 @@ ValidationStatus is_valid_phone(const char *phone)
  */
 ValidationStatus is_phone_duplicate(const char *phone, const AddressBook *book)
 {
-    Contact *current = book->head;
+    const Contact *current = book->head;
 
     while(current != NULL) {
         if(strcmp(current->phone, phone) == 0) {
@@ -111,8 +111,8 @@ ValidationStatus is_valid_email(const char *email)
         }
     }
 
-    char *at = strchr(email, '@');
-    char *dot = strrchr(email,'.');
+    const char *at = strchr(email, '@');
+    const char *dot = strrchr(email,'.');
 
     if (!at || !dot || dot < at) {
         return INVALID_FORMAT;
@@ -137,7 +137,7 @@ ValidationStatus is_valid_email(const char *email)
  */
 ValidationStatus is_email_duplicate(const char *email, const AddressBook *book)
 {
-    Contact *current = book->head;
+    const Contact *current = book->head;
 
     while(current != NULL) {
         if(strcmp(current->email, email) == 0) {

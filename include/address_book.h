@@ -59,7 +59,7 @@ void create_contact(AddressBook *book);
  * @param book A pointer to the AddressBook.
  * @return Pointer to the found contact, or NULL.
  */
-Contact *search_contact(AddressBook *book);
+Contact *search_contact(const AddressBook *book);
 
 /**
  * @brief Edits an existing contact.
