@@ -1,6 +1,6 @@
 /**
  * @file address_book.h
- * @author Gajavelly Sai Suraj 
+ * @author Gajavelly Sai Suraj
  * @brief Header defining the core data structures and function prototypes for the Address Book.
  * @copyright Copyright (c) 2025 All Rights Reserved.
  */
