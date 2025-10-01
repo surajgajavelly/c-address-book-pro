@@ -36,7 +36,7 @@ This project follows a clean, professional, and scalable directory structure:
 ├── LICENSE
 ├── README.md
 ├── assets/
-│   └── demo_test.gif
+│   └── test.gif
 ├── build/
 ├── include/
 │   ├── address_book.h
