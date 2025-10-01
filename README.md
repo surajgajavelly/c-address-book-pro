@@ -82,6 +82,7 @@ cd c-address-book-pro
 rm -rf build && mkdir build && cd build
 cmake ..
 make
+cd ..
 ```
 ### 4. Run the Application:
 The executable is in the build directory. Run it from the project's root:

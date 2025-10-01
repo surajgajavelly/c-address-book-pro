@@ -646,7 +646,7 @@ void save_contacts_to_file(const AddressBook *book) {
 
     printf("\n<==========================| SAVE CONTACTS TO FILE |==========================>\n");
 
-    FILE *fptr = fopen("../contacts.csv", "w");
+    FILE *fptr = fopen("contacts.csv", "w");
     if(fptr == NULL) {
         printf("Ein: *Whines softly* I couldn't open the file to save your contacts.\n");
         printf("Ein: Let's check the file location and try again later.\n");
@@ -684,7 +684,7 @@ void load_contacts_from_file(AddressBook *book) {
 
     printf("\n<=========================| LOAD CONTACTS FROM FILE |===========================>\n\n");
 
-    FILE *fptr = fopen("../contacts.csv", "r");
+    FILE *fptr = fopen("contacts.csv", "r");
     if(fptr == NULL) {
         printf("Ein: *Sniffs around the desk* Hmm I couldn't find or open 'contacts.csv'.\n");
         printf("Ein: Maybe it's not here yet, we can create it when you save your first contact.\n");
