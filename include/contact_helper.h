@@ -2,7 +2,7 @@
  * @file contact_helper.h
  * @author Gajavelly Sai Suraj
  * @brief Helper, validation, and user-interaction functions for the Address Book.
- * @copyright Copyright (c) 2025
+ * @copyright Copyright (c) 2025 All rights Reserved
  */
 
 #ifndef CONTACT_HELPER_H

@@ -2,7 +2,7 @@
  * @file address_book.c
  * @author Gajavelly Sai Suraj (you@domain.com)
  * @brief Implementation of the core functions for managing the address book.
- * @copyright Copyright (c) 2025
+ * @copyright Copyright (c) 2025 All rights Reserved
  */
 
 #include <stdio.h>
@@ -13,12 +13,66 @@
 #include "contact_helper.h"
 
 /**
+ * @brief Initializes an AddressBook to a safe, empty state.
+ * @param book A pointer to the AddressBook struct to be initialized.
+ */
+void initialize(AddressBook *book) 
+{
+
+    if (book == NULL) {
+        printf("Ein: *Ears perk, then droop* Hmm… I can't seem to find the address book to set up.\n");
+        return;
+    }
+
+    book->head = NULL;
+    book->contact_count = 0;
+    book->next_id = 1;
+}
+
+/**
+ * @brief Frees the memory allocated for the address book.
+ * 
+ * @param book A pointer to the AddressBook struct.
+ */
+void free_address_book(AddressBook *book) 
+{
+
+    // Defensive check: ensure the AddressBook pointer is valid
+    if (book == NULL) {
+        printf("Ein: *Tilts head* I can't clean up what isn't here.\n");
+        return;
+    }
+
+    // Check if the address book is already empty
+    if (book->head == NULL) {
+        return;
+    }
+
+    // Start at the beginning of the list
+    Contact* current = book->head;
+    Contact *temp = NULL;
+
+    // Iterate through the linked list, freeing each contact node
+    while (current != NULL) {
+        temp = current->next;
+        free(current);
+        current = temp;
+    }
+
+    // Finally, reset the address book struct to its initial, safe state.
+    book->head = NULL;
+    book->contact_count = 0;
+    book->next_id = 1;
+
+}
+
+/**
  * @brief Creates a new contact by prompting the user for details, validating the input,
  * and adding the contact to the address book's linked list.
  * @param book A pointer to the AddressBook struct where the new contact will be stored.
  */
-void create_contact(AddressBook* book)
-{
+void create_contact(AddressBook* book) {
+
     printf("\n<==============================| CREATE CONTACT |==============================>\n");
     //printf("\nEin: *Barks sadly.* The address book is full! Let's delete some old contacts to make space.\n");
     Contact *new_contact = (Contact *)malloc(sizeof(Contact));
@@ -155,8 +209,8 @@ void create_contact(AddressBook* book)
  * @param book A pointer to the AddressBook struct.
  * @return A pointer to the selected Contact node, or NULL if not found or cancelled.
  */
-Contact* search_contact(AddressBook *book)
-{
+Contact* search_contact(AddressBook *book) {
+    
     printf("\n<===============================| SEARCH CONTACT |===============================>\n");
     printf("Ein: Time to put my nose to work! Let's see who we can find.\n");
 
@@ -311,8 +365,8 @@ Contact* search_contact(AddressBook *book)
  * @brief Allows the user to edit the details of a specific contact.
  * @param book A pointer to the AddressBook struct.
  */
-void edit_contact(AddressBook *book)
-{
+void edit_contact(AddressBook *book) {
+
     printf("\n<===============================| EDIT CONTACT |===============================>\n");
     printf("Ein: Let's make some updates - tell me what needs changing.\n");
 
@@ -466,8 +520,8 @@ void edit_contact(AddressBook *book)
  * @brief Searches for and deletes a contact from the address book after user confirmation.
  * @param book A pointer to the AddressBook struct to be modified.
  */
-void delete_contact(AddressBook *book)
-{
+void delete_contact(AddressBook *book) {
+
     printf("\n<===============================| DELETE CONTACT |===============================>\n");
 
     if(book->contact_count == 0 || book->head == NULL)
@@ -549,8 +603,8 @@ void delete_contact(AddressBook *book)
  * @brief Traverses the linked list and prints a formatted list of all contacts.
  * @param book A const pointer to the AddressBook struct (read-only operation).
  */
-void list_contacts(const AddressBook *book)
-{
+void list_contacts(const AddressBook *book) {
+
     printf("\n<=============================| CONTACT LIST |==================================>\n");
 
     if (book->head == NULL) {
@@ -583,33 +637,13 @@ void list_contacts(const AddressBook *book)
     printf("Ein: That's the full pack for now. All safe and sound.\n");
 }
 
-/**
- * @brief Initializes an AddressBook to a safe, empty state.
- * @param book A pointer to the AddressBook struct to be initialized.
- */
-void initialize(AddressBook *book) 
-{
-
-    if (book == NULL) {
-        printf("Ein: *Ears perk, then droop* Hmm… I can't seem to find the address book to set up.\n");
-        printf("Ein: Let's make sure we have one ready before we start.\n");
-        return;
-    }
-
-    book->head = NULL;
-    book->contact_count = 0;
-    book->next_id = 1;
-
-    printf("Ein: All set! Your address book is fresh and ready for new contacts.\n");
-}
-
 
 /**
  * @brief Saves the entire address book to a simple CSV file.
  * @param book A const pointer to the AddressBook to be saved (read-only).
  */
-void save_contacts_to_file(const AddressBook *book)
-{
+void save_contacts_to_file(const AddressBook *book) {
+
     printf("\n<==========================| SAVE CONTACTS TO FILE |==========================>\n");
 
     FILE *fptr = fopen("contacts.csv", "w");
@@ -646,8 +680,8 @@ void save_contacts_to_file(const AddressBook *book)
  * @brief Loads contacts from the CSV file into the address book.
  * @param book A pointer to the AddressBook to be populated.
  */
-void load_contacts_from_file(AddressBook *book)
-{
+void load_contacts_from_file(AddressBook *book) {
+
     printf("\n<=========================| LOAD CONTACTS FROM FILE |===========================>\n\n");
 
     FILE *fptr = fopen("contacts.csv", "r");
@@ -714,47 +748,5 @@ void load_contacts_from_file(AddressBook *book)
     }
 }
 
-/**
- * @brief Frees the memory allocated for the address book.
- * 
- * @param book A pointer to the AddressBook struct.
- */
-void free_address_book(AddressBook *book) 
-{
-    printf("\n<============================| CLEARING ADDRESS BOOK |=========================>\n\n");
 
-    // Defensive check: ensure the AddressBook pointer is valid
-    if (book == NULL) {
-        printf("Ein: *Tilts head* I can't clean up what isn't here.\n");
-        return;
-    }
-
-    // Check if the address book is already empty
-    if (book->head == NULL) 
-    {
-        printf("Ein: *Sniffs around* Looks like it's already empty, nothing to tidy up.\n");
-        printf("--------------------------------------------------------------------------------\n");
-        return;
-    }
-
-    // Start at the beginning of the list
-    Contact* current = book->head;
-    printf("Ein: *Rolls up sleeves (metaphorically)* Time to clear out the address book.\n");
-
-    // Iterate through the linked list, freeing each contact node
-    while (current != NULL) 
-    {
-        Contact *temp = current;     // Iterate through the linked list, freeing each contact node
-        current = current->next;     // Move to the next node before freeing the current one
-        free(temp);                  // Free the memory allocated for the current contact
-    }
-
-    // Finally, reset the address book struct to its initial, safe state.
-    book->head = NULL;
-    book->contact_count = 0;
-
-    printf("\nEin: All contacts have been safely removed.\n");
-    //printf("Ein: The address book is now fresh, clean, and ready for new friends.\n");
-    printf("--------------------------------------------------------------------------------\n");
-}
 

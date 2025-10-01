@@ -16,3 +16,7 @@ docs/
 # Other common files to ignore
 *.swp
 *~
+
+# CTest result directory
+Testing/
+contacts.csv
