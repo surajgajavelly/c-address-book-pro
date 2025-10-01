@@ -684,7 +684,7 @@ void load_contacts_from_file(AddressBook *book) {
 
     printf("\n<=========================| LOAD CONTACTS FROM FILE |===========================>\n\n");
 
-    FILE *fptr = fopen("contacts.csv", "r");
+    FILE *fptr = fopen("../contacts.csv", "r");
     if(fptr == NULL) {
         printf("Ein: *Sniffs around the desk* Hmm I couldn't find or open 'contacts.csv'.\n");
         printf("Ein: Maybe it's not here yet, we can create it when you save your first contact.\n");
