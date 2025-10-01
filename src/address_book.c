@@ -646,7 +646,7 @@ void save_contacts_to_file(const AddressBook *book) {
 
     printf("\n<==========================| SAVE CONTACTS TO FILE |==========================>\n");
 
-    FILE *fptr = fopen("contacts.csv", "w");
+    FILE *fptr = fopen("../contacts.csv", "w");
     if(fptr == NULL) {
         printf("Ein: *Whines softly* I couldn't open the file to save your contacts.\n");
         printf("Ein: Let's check the file location and try again later.\n");
